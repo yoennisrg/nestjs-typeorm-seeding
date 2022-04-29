@@ -5,10 +5,6 @@ export default {
   migrationsTableName: 'migrations',
   migrations: ['src/migrations/*.ts'],
   subscribers: ['src/subscriber/*.ts'],
-  seeds: ['src/seeding/*.seeder.ts'],
-  factories: ['src/factories/*.factory.ts'],
-  // seeds: ['src/seeds/**/*{.ts,.js}'],
-  // factories: ['src/factories/**/*{.ts,.js}'],
   cli: {
     migrationsDir: 'src/migrations',
     entitiesDir: 'src/entities',

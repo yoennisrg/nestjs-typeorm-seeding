@@ -9,7 +9,9 @@ export default {
   database: process.env.DATABASE_NAME || 'demo',
   entities: ['src/entities/*.entity.ts'],
   synchronize: Boolean(process.env.ENTITY_SYNC) || false,
-  autoLoadEntities: Boolean(process.env.ENTITY_AUTO_LOAD) || false,
+  autoLoadEntities: Boolean(process.env.ENTITY_AUTO_LOAD) || true,
   connectTimeoutMS: 2000,
   logging: ['error', 'migration', 'schema'],
+  seeds: ['src/seeds/*.{.ts,.js}'],
+  factories: ['src/factories/*.{.ts,.js}'],
 } as TypeOrmModuleOptions;
