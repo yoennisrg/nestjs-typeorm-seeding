@@ -24,13 +24,13 @@
     "migrate:generate": "npm run typeorm migration:generate -- -n",
     "migrate:revert": "npm run typeorm migration:revert",
     "migrate:run": "npm run typeorm migration:run",
-    "migrate:show": "npm run typeorm migration:show",    
+    "migrate:show": "npm run typeorm migration:show",
     "schema:sync": "npm run typeorm schema:sync",
     "schema:drop": "npm run typeorm schema:drop",
     "schema:log": "npm run typeorm schema:log",
-    "entity:create":"typeorm entity:create -n ",
-    "seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed",
-    "seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config"
+    "entity:create": "typeorm entity:create -n ",
+    "seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed --root src/configs",
+    "seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config --root src/configs"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
@@ -43,9 +43,11 @@
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
     "sqlite": "^4.1.1",
-    "typeorm": "^0.2.45"
+    "typeorm": "^0.2.45",
+    "typeorm-seeding": "^1.6.1"
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.2.0",
     "@nestjs/cli": "^8.0.0",
     "@nestjs/schematics": "^8.0.0",
     "@nestjs/testing": "^8.0.0",

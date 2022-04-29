@@ -12,7 +12,7 @@ export class User {
   lastName: string;
 
   @Column()
-  value: number;
+  age: number;
 
   @Column({ default: true })
   isActive: boolean;
